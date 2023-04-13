@@ -13,7 +13,7 @@ public class RecipeHandler {
         try {
             conn = DriverManager.getConnection("jdbc:sqlite:" + dbName + ".db");
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            System.err.println(e.getMessage());
         }
     }
 
